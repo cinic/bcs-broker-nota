@@ -1,0 +1,79 @@
+.btn {
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $btn-default-font-size, $line-height-base, 0);
+  @include user-select(none);
+  @include transition(all .2s ease-in-out);
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-color: transparent;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  color: $btn-default-color;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.btn-blue {
+    color: $btn-default-color;
+    border-color: $btn-default-color;
+  }
+  &.btn-dark-blue {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    &:hover,
+    &:focus {
+      background-color: $dark-blue;
+      color: $white;
+    }
+  }
+  &.btn-white {
+    color: $white;
+    border-color: $white;
+    &:hover,
+    &:focus {
+      background-color: $light-grey;
+      color: $black;
+    }
+  }
+  &.btn-grey {
+    color: $black;
+    border-color: $grey;
+    &:hover,
+    &:focus {
+      background-color: $grey;
+      color: $white;
+    }
+  }
+
+  &[type='submit'] {
+    font-size: 13px;
+    background-color: transparent;
+    border: 1px solid;
+  }
+}

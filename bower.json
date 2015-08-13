@@ -1,0 +1,23 @@
+{
+  "name": "nota",
+  "version": "1.0.0",
+  "homepage": "http://github.com",
+  "authors": [
+    "Alexander Andreev <cinic.rus@gmail.com>"
+  ],
+  "description": "BCS Broker landing page - structured bonds",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "2.*"
+  }
+}
