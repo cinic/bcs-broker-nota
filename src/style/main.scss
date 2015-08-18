@@ -8,9 +8,11 @@
 @import 'partials/scaffolding';
 @import 'partials/grid';
 @import 'partials/buttons';
-
+@import "partials/layout";
+@import "partials/page";
+@import "partials/selectize.default";
 
 /*
 * Custom
 */
-@import "partials/layout";
+

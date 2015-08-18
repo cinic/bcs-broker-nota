@@ -1,0 +1,121 @@
+body {
+  font: 400 18px/24px 'PT Sans', sans-serif;
+  color: #13254e;
+}
+
+.header {
+  .top-panel {
+    padding-top: $grid-gutter-width * 2;
+  }
+}
+
+.footer {
+  padding: 30px 0;
+  background: #13254e url(../img/pattern-03.png) repeat 0 0;
+  color: white;
+}
+
+.clear-list {
+  padding: 0;
+  list-style: none;
+}
+
+.section-title {
+  margin: 0;
+  font: 700 36px/54px 'Meta Pro', sans-serif;
+}
+
+.pseudo-link {
+  color: #f1b900;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.custom-list {
+  margin: 0;
+  padding: 20px 0 45px 500px;
+  list-style: none;
+  line-height: 26px;
+
+  li {
+      margin-bottom: 24px;
+    }
+    .icon {
+      float: left;
+      margin-left: -60px;
+      width: 37px;
+      height: 38px;
+      background: url(../img/icons.png) no-repeat 0 0;
+    }
+    .icon-time { background-position: 0 -38px; }
+    .icon-cabinet { background-position: 0 -76px; }
+    .icon-calc { background-position: 0 -114px; }
+    .icon-tools { background-position: 0 -152px; }
+    .icon-quotes { background-position: 0 -190px; }
+    .icon-buy { background-position: 0 -228px; }
+}
+
+.form-group {
+  margin-bottom: 30px;
+  >input,
+  .custom-select .selectize-input { width: 216px; }
+  >input {
+    padding: 10px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #fbe77f;
+
+    &.name { width: 390px; }
+    
+    &.error {
+      border-color: #e42a2a;
+    }
+    &:focus,
+    &.focus {
+      border-color: #f0b82a;
+      -webkit-box-shadow: inset 1px 1px 0px 0px #f0b82a, inset -1px -1px 0 0 #f0b82a;
+      box-shadow: inset 1px 1px 0px 0px #f0b82a, inset -1px -1px 0 0 #f0b82a;
+      outline: none;
+    }
+  }
+
+  label {
+    padding: 10px 0;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.marker {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+  background: url(../img/marker.png) no-repeat 0 0;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover,
+  &.hovered,
+  &.active {
+    background-position: 0 -44px;
+  }
+}
+
+#nota-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 410px;
+  width: 100%;
+  background: rgba(25, 41, 79, .93);
+}

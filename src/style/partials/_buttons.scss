@@ -1,22 +1,22 @@
 .btn {
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $btn-default-font-size, $line-height-base, 0);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $btn-default-font-size, $line-height-base, 3px);
   @include user-select(none);
   @include transition(all .2s ease-in-out);
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: 400;
-  font-size: 24px;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   background-color: transparent;
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   white-space: nowrap;
   color: $btn-default-color;
   text-decoration: none;
-  text-transform: uppercase;
+  line-height: 20px;
+  box-shadow: inset 0 -1px #e79600, inset 0 1px #fad869;
 
   &,
   &:active,
@@ -30,50 +30,26 @@
   &:hover,
   &:focus,
   &.focus {
-    
+    box-shadow: inset 0 -1px #e79600, inset 0 1px #fad869, 0 3px 8px 0px rgba(83,56,13,.48);
   }
 
   &:active,
   &.active {
     outline: 0;
     background-image: none;
+    box-shadow: inset 0 0 9px 2px rgba(166,113,29,.60);
   }
 
-  &.btn-blue {
-    color: $btn-default-color;
-    border-color: $btn-default-color;
-  }
-  &.btn-dark-blue {
-    color: $dark-blue;
-    border-color: $dark-blue;
-    &:hover,
-    &:focus {
-      background-color: $dark-blue;
-      color: $white;
-    }
-  }
-  &.btn-white {
-    color: $white;
-    border-color: $white;
-    &:hover,
-    &:focus {
-      background-color: $light-grey;
-      color: $black;
-    }
-  }
-  &.btn-grey {
-    color: $black;
-    border-color: $grey;
-    &:hover,
-    &:focus {
-      background-color: $grey;
-      color: $white;
-    }
+  &.btn-yellow {
+    background-color: #f1b900;
   }
 
   &[type='submit'] {
-    font-size: 13px;
-    background-color: transparent;
-    border: 1px solid;
+    border: 0;
+  }
+  &.btn-mini {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 14px;
   }
 }

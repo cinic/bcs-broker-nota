@@ -1,7 +1,292 @@
-include _header.jade
-header
-  div.container
-    a.brand(href="http://broker.ru" target="_blank")
-      img(src="img/logo.png" alt="БКС Брокер")/
-footer
-  p 1
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")/
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+    title BCS Broker landing page - structured bonds
+    meta(name="description" content="")/
+    meta(name="viewport" content="width=device-width, initial-scale=1")/
+
+    link(rel="stylesheet" href="css/main.css")/
+  body  
+    header.header
+      .container
+        .top-panel.clearfix
+          a.brand(href="http://broker.ru" target="_blank")
+            img(src="img/logo.png" alt="БКС Брокер")/
+          .phone.pull-right
+            .clearfix
+              a.cpc-tel.num(href="tel:88005005545") 8 800 500 55 45
+            .clearfix
+              span.description бесплатный звонок по России
+            span#get-call.get-call.pull-right.btn.btn-mini.btn-yellow Заказать звонок
+            form#get-call-form.get-call
+              .form-group.inline
+                label(for="phone-num") Мобильный телефон
+                input(type="tel" id="phone-num")
+              .form-group.inline.no-label
+                input.btn.btn-mini.btn-yellow(type="submit" value="Заказать звонок")
+        h1.tagline.text-center
+          |Зарабатывайте 26% годовых
+          br
+          |Попробуйте&nbsp;надежные&nbsp;инвестиции, доступные каждому!
+        .advice.text-center
+          a.btn.btn-yellow(href="#" title="Получить консультацию") Получить консультацию
+          span перезвоним и проконсультируем бесплатно
+    section.how-to.text-center
+      .container
+        h2.section-title Как получается 26% годовых ?
+        .figure
+          img(src="../img/how-to.png", alt="Как получается 26%", width="530", height="205")/
+        .row
+          .col-sm-6
+            p
+              b Индивидуальный инвестиционный счет
+            p Это Ваш персональный брокерский счет&nbsp;с&nbsp;налоговой защитой, позволяющий&nbsp;ежегодно&nbsp;получать налоговый вычет в размере 13% от суммы внесенных денежных средств на&nbsp;внесенные средства.
+          .col-sm-6
+            p
+              b Структурированная облигация  (Нота №1)
+            p «Нота №1» — первая в России структурированная облигация. Нота дает&nbsp;инвестору возможность получать фиксированную доходность (купон) в размере 13% годовых каждые 6 месяцев.&nbsp;«Нота №1» основана на долговых обязательствах трех самых крупных банков РФ (Сбербанк, ВТБ, ВЭБ).
+        .teaser.clearfix
+          h4.section-title Высокий доход от ваших вложений
+          .clearfix
+            div.item.item-1
+              b 26% 
+              span.hidden - 
+              |Высокая&nbsp;ставка&nbsp;и&nbsp;надежные инструменты&nbsp;в&nbsp;портфеле. Облигации ВЭБ, ВТБ, Сбербанк.
+            div.item.item-2
+              b
+                sub Oт 
+                |80000
+                sup ₽ 
+              span.hidden - 
+              |Доступная сумма 
+              span.new-line входа
+            div.item.item-3
+              b 13% 
+              span.hidden - 
+              |Фиксированная годовая доходность при приобретении структурированной ноты на ИИС
+            div.item.item-4
+              b
+                sub От 
+                |50000
+                sup ₽ 
+              span.hidden - 
+              |Возвращается каждый год по вычету
+          .shadow
+    section.easy-to-start.clearfix
+      .container
+        h2.section-title.text-center Легко начать
+        ul.custom-list
+          li
+            span.icon.icon-support
+            |Бесплатная круглосуточная поддержка, на каждом этапе инвестиционного процесса
+          li
+            span.icon.icon-time
+            |20 минут для открытия счета и приобретению облигации
+          li
+            span.icon.icon-cabinet
+            |Удобный личный кабинет клиента позволит контролировать состояние вашего счета
+          li
+            span.icon.icon-calc
+            |Простой и прозрачный инструмент для комфортного начала приумножения своих средств
+    section.permanent-confidence
+      .container
+        h2.section-title.text-center Постоянная уверенность
+        ul.custom-list
+          li
+            span.icon.icon-tools
+            |Надежные инструменты в портфеле Внешэкономбанк, Сбербанк, ВТБ, устойчивость которых не вызывает сомнений
+          li
+            span.icon.icon-quotes
+            |Структурированная облигация торгуется на российском фондовом рынке. Котировки можно отслеживать онлайн на сайте Московской биржи
+          li
+            span.icon.icon-buy
+            |Покупка и продажа облигаций доступна в любой момент, при этом вы не теряете выплаты по купонам при досрочной продаже 
+        .advice.text-center
+          a.btn.btn-yellow(href="#" title="Получить консультацию") Получить консультацию
+          span.blue перезвоним и проконсультируем бесплатно
+    section.nota
+      .container
+        h2.section-title.text-center Структурированная облигация — это
+        ol.row.clear-list.text-center
+          li.col-sm-3.globe
+            p Аналог поппулярного на западе биржевого инструмента. Покупайте и <span class="pseudo-link" data-href="#nota-analog">продавайте облигации</span> в любой момент.
+            #nota-analog.nota-item.text-center
+              .text Структурированные облигации являются аналогом западных ETNs (exchange traded notes), популярных среди зарубежных инвесторов. В частности, они позволяют превращать уже ставшие популярными структурные продукты в биржевые торгуемые инструменты. А это значит, что инвестор может в любой момент купить или продать структурированную облигацию через торговые терминалы Quik, Bloomberg и т.д.
+              span.close
+                |Закрыть
+          li.col-sm-3.percent
+            p Фиксировая доходность <span class="pseudo-link" data-href="#nota-fixed">13%&nbsp;годовых&nbsp;каждые полгода</span>, без потери накопленний при досрочной&nbsp;продаже.
+            #nota-fixed.nota-item.text-center
+              .text Структурированные облигации являются аналогом западных ETNs (exchange traded notes), популярных среди зарубежных инвесторов. В частности, они позволяют превращать уже ставшие популярными структурные продукты в биржевые торгуемые инструменты. А это значит, что инвестор может в любой момент купить или продать структурированную облигацию через торговые терминалы Quik, Bloomberg и т.д.
+              span.close
+                |Закрыть
+          li.col-sm-3.bank
+            p <span class="pseudo-link" data-href="#nota-investing">Инвестиции в крупнейшие банки</span> РФ, устойчивость которых не вызывает сомнений.
+            #nota-investing.nota-item.text-center
+              .text Структурированные облигации являются аналогом западных ETNs (exchange traded notes), популярных среди зарубежных инвесторов. В частности, они позволяют превращать уже ставшие популярными структурные продукты в биржевые торгуемые инструменты. А это значит, что инвестор может в любой момент купить или продать структурированную облигацию через торговые терминалы Quik, Bloomberg и т.д.
+              span.close
+                |Закрыть
+          li.col-sm-3.shield
+            p <span class="pseudo-link" data-href="#nota-surens">Уверенность</span> в сохранности своих инвестиций , получая более высокую процентную ставку!
+            #nota-surens.nota-item.text-center
+              .text Структурированные облигации являются аналогом западных ETNs (exchange traded notes), популярных среди зарубежных инвесторов. В частности, они позволяют превращать уже ставшие популярными структурные продукты в биржевые торгуемые инструменты. А это значит, что инвестор может в любой момент купить или продать структурированную облигацию через торговые терминалы Quik, Bloomberg и т.д.
+              span.close
+                |Закрыть
+      #nota-popup
+    section.address
+      .container
+        h2.section-title.text-center Профессиональная консультация
+        .row
+          .col-sm-8.col-sm-offset-2
+            form.feedback-form
+              <input type="hidden" name="distinct_id">
+              <input type="hidden" name="refid" value="">
+              .form-group.clearfix
+                label(for="city2") Город
+                select.custom-select(id="city2" name="city")
+                  option(selected="selected" value="0") Другой город
+                  option(value="108") Москва
+                  option(value="134") Новосибирск
+                  option(value="46") Абакан
+                  option(value="36") Алматы
+                  option(value="113") Альметьевск
+                  option(value="115") Анапа
+                  option(value="119") Армавир
+                  option(value="71") Архангельск
+                  option(value="105") Астрахань
+                  option(value="175") Ачинск
+                  option(value="79") Барнаул
+                  option(value="139") Белгород
+                  option(value="35") Биробиджан
+              .form-group.clearfix
+                label(for="name") ФИО
+                <input class="name" type="text" id="name" name="name" placeholder="Иванов Иван Иванович">
+              .form-group.clearfix
+                label(for="mobile") Мобильный телефон
+                <input class="error" type="text" id="mobile" name="phone" placeholder="+7 495 285 2737">
+              .form-group.clearfix
+                label(for="email") Электронная почта
+                <input type="text" id="email" name="email" placeholder="konstantinopolskykk@gmail.com">
+              .form-group.label-offset.clearfix
+                label
+                  input.custom-checkbox(type="checkbox") 
+                  |  Я согласен с условиями передачи информации
+              .form-group.label-offset.clearfix.actions
+                .advice
+                  input.btn.btn-yellow(type="submit", value="Получить консультацию")
+                  span перезвоним и проконсультируем бесплатно
+      .container.clearfix.contact-map
+        .map-controls
+          h3
+            |Отделения в 
+            select.custom-select(id="city1" name="city1")
+              option(value="108") Москве
+              option(value="134") Новосибирск
+              option(value="46") Абакан
+              option(value="36") Алматы
+              option(value="113") Альметьевск
+              option(value="115") Анапа
+              option(value="119") Армавир
+              option(value="71") Архангельск
+              option(value="105") Астрахань
+              option(value="175") Ачинск
+              option(value="79") Барнаул
+              option(value="139") Белгород
+              option(value="35") Биробиджан
+          ul.phones
+            li.clearfix
+              span.title для клиентов
+              span.contact
+                b 8 (800) 500-55-45
+            li.clearfix
+              span.title для трейдеров
+              span.contact
+                b 8 (800) 500-55-45
+                br
+                b info@msk.bcs.ru
+          .time понедельк — пятнца: с 10:00 до 20:00
+          ul.points
+            li
+              a(href="javascript:void(0)" class="point" data-point="1")
+                <span class="marker">1</span>
+                <span class="name">Проспект Мира</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="2")
+                <span class="marker">2</span>
+                <span class="name">На Красной Пресне</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="3")
+                <span class="marker">3</span>
+                <span class="name">Кутузовский</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="4")
+                <span class="marker">4</span>
+                <span class="name">Павелецкий</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="5")
+                <span class="marker">5</span>
+                <span class="name">На Марксистской</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="6")
+                <span class="marker">6</span>
+                <span class="name">На Новослободской</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+            li  
+              a(href="javascript:void(0)" class="point" data-point="7")
+                <span class="marker">7</span>
+                <span class="name">На Тульской</span>
+              .details
+                |Проспект Мира, 69, строение 1
+                br
+                |129110, Москва
+        .map
+          script
+            |var contactPoints = {1:[55.786495,37.634344],2:[55.762085,37.570501],3:[55.746573,37.559972],4:[55.731191,37.635309],5:[55.738333,37.661635],6:[55.779859,37.599372],7:[55.709028,37.620761]};
+          <div id="contact-map"></div>
+    footer.footer.clearfix
+      .container
+        .panel.clearfix
+          a.brand(href="http://broker.ru" target="_blank")
+            img(src="img/logo.png" alt="БКС Брокер")/
+          .phone.pull-right
+            .clearfix
+              a.cpc-tel.num(href="tel:88005005545") 8 800 500 55 45
+            .clearfix
+              span.description бесплатный звонок по России
+            span.get-call.pull-right.btn.btn-mini.btn-yellow Заказать звонок
+        ol.copy
+          li ООО «Компания БКС» лидер в рейтинге ведущих операторов в режиме основных торгов Т+ по акциям по итогам марта 2015 года по данным ОАО Московская Биржа.
+          li Дистанционное открытие ИИС (Индивидуального инвестиционного счета) доступно только клиентам заключившим Генеральное соглашение о комплексном обслуживании на рынке ценных бумаг и Соглашение об организации корпоративной системы электронного документооборота «BCS» с ООО «Компания БКС».
+          li Доходность по цене последней сделки ОФЗ выпуска 25081 (облигация федерального займа, номер государственной регистрации 25081RMFS, эмитент Министерство Финансов РФ) по состоянию на 03.03.2015 г. 14,26%. Результат инвестирования в прошлом не определяет доходности в будущем. Стоимость ценных бумаг может увеличиваться и уменьшаться. Более подробно с рисками связанными с осуществлением операций на рынке ценных бумаг вы можете ознакомиться в Приложении № 14 к Регламенту оказания услуг на рынке Не является рекламой ценных бумаг.
+          li Доходность виртуального портфеля «Meister(Мейстер)», смоделирована экспертами ООО «Компания БКС» с учетом комиссии в 4 рубля за один срочный фьючерсный контракт по данным торгов на ЗАО «ФБ ММВБ» (ОАО Московская Биржа) с 01.02.2014 по 01.02.2015, не учитывает расходы на оплату услуги, брокерских и депозитарных услуг, подачи поручений по телефону и иных расходов, подлежащих оплате клиентом. Полный список тарифов ООО «Компания БКС» приведен в приложении № 11 к Регламенту оказания услуг на рынке ценных бумаг ООО «Компания БКС». Результат инвестирования в прошлом не определяет дохода в будущем. ООО «Компания БКС» не несет ответственности за результаты деятельности по данным рекомендациям. Торговые рекомендации «Биржевой Гуру», предоставляются исключительно в информационных целях и не могут рассматриваться как, или быть использованы в качестве, предложения или побуждения сделать заявку на покупку или продажу, или вложение в ценные бумаги, или другие финансовые инструменты. ООО «Компания БКС» не предпринимает каких-либо шагов к тому, чтобы убедить кого-либо в том, что ценные бумаги, указанные в торговых рекомендациях, являются подходящими для того или иного инвестора.
+          li Доходность виртуального портфеля «Лира», смоделирована экспертами ООО «Компания БКС» с учетом комиссии в размере 0,06% от объема сделки по данным торгов на ЗАО «ФБ ММВБ» (ОАО Московская Биржа) с 01.04.2014 по 01.04.2015, не учитывает расходы на оплату услуги, брокерских и депозитарных услуг, подачи поручений по телефону и иных расходов, подлежащих оплате клиентом. Полный список тарифов ООО «Компания БКС» приведен в приложении № 11 к Регламенту оказания услуг на рынке ценных бумаг ООО «Компания БКС». Результат инвестирования в прошлом не определяет дохода в будущем. ООО «Компания БКС» не несет ответственности за результаты деятельности по данным рекомендациям. Торговые рекомендации «Биржевой Гуру», предоставляются исключительно в информационных целях и не могут рассматриваться как, или быть использованы в качестве, предложения или побуждения сделать заявку на покупку или продажу, или вложение в ценные бумаги, или другие финансовые инструменты. ООО «Компания БКС» не предпринимает каких-либо шагов к тому, чтобы убедить кого-либо в том, что ценные бумаги, указанные в торговых рекомендациях, являются подходящими для того или иного инвестора.
+          li При внесении на ИИС максимальной суммы в год 400 000 рублей. Налоговый вычет предоставляется только физическим лицам налоговым резидентам РФ, получающим доход облагаемых НДФЛ. (ст.219.1 Налогового кодекса РФ).
+    script
+      |var center_latitude = 55.786495, center_longitude = 37.634344;
+    script(src="js/main.js")
+    script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")

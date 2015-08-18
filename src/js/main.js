@@ -7,3 +7,6 @@
     Custom
  */
 //= partials/helper.js
+//= partials/selectize.js
+//= partials/custom-select.js
+//= partials/contacts.js
