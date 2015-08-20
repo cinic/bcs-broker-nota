@@ -25,8 +25,8 @@ var path = {
     },
     src: {
         html: ['src/template/*.jade', '!src/template/_*.jade'],
-        js: 'src/js/main.js',
-        style: 'src/style/main.scss',
+        js: 'src/js/*.js',
+        style: 'src/style/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -83,12 +83,13 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/style/'],
-            outputStyle: 'compressed',
+            //outputStyle: 'compressed',
+            outputstyle: 'expanded',
             sourceMap: true,
             errLogToConsole: true
         }))
         .pipe(prefixer())
-        .pipe(cssmin())
+        //.pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));

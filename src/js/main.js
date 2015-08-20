@@ -1,12 +1,15 @@
 /*
- Third party
+    Selectize plugin
  */
-//= ../../bower_components/jquery/dist/jquery.min.js
+//= partials/selectize.js
 
 /*
     Custom
  */
 //= partials/helper.js
-//= partials/selectize.js
 //= partials/custom-select.js
+
+/*
+    Contacts from broker.ru
+ */
 //= partials/contacts.js
